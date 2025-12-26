@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<Layout title="Blog | Tom Hayes">
+	<h1>Tech Commentaries</h1>
+	<p>Reflections on AI, technology, and the future of work.</p>
+
+	<div class="blog-list">
+		{
+			posts.map((post) => (
+				<article class="blog-post">
+					<h2><a href={`/blog/${post.slug}/`}>{post.data.title}</a></h2>
+					<time datetime={post.data.pubDate.toISOString()}>
+						{post.data.pubDate.toLocaleDateString('en-us', {
+							year: 'numeric',
+							month: 'long',
+							day: 'numeric',
+						})}
+					</time>
+					<p>{post.data.description}</p>
+				</article>
+			))
+		}
+	</div>
+</Layout>
+
+<style>
+	.blog-list {
+		margin-top: 3rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+	.blog-post {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		padding-bottom: 2rem;
+	}
+	time {
+		font-size: 0.9rem;
+		opacity: 0.6;
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+	h2 {
+		margin-bottom: 0.5rem;
+	}
+	h2 a {
+		color: var(--color-primary);
+		text-decoration: none;
+	}
+	h2 a:hover {
+		text-decoration: underline;
+	}
+</style>

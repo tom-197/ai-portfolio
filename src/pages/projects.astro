@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Projects | Tom Hayes">
+	<h1>Projects</h1>
+	<p>A collection of my work in physical computing and AI.</p>
+
+	<div class="card-grid">
+		<!-- Legacy Project -->
+		<article class="card">
+			<h3>Tangible Interfaces</h3>
+			<p>Legacy work exploring physical manifestations of digital data.</p>
+			<a href="https://drshayes.com" target="_blank">View Project &rarr;</a>
+		</article>
+
+		<!-- Future AI Project Placeholder -->
+		<article class="card">
+			<h3>AI Sentiment Analysis</h3>
+			<p>Coming Soon: A real-time analysis of blog sentiment using LLMs.</p>
+			<span class="tag">In Progress</span>
+		</article>
+	</div>
+</Layout>
+
+<style>
+	.tag {
+		display: inline-block;
+		background: rgba(255, 255, 255, 0.1);
+		padding: 0.2rem 0.5rem;
+		border-radius: 4px;
+		font-size: 0.8rem;
+		margin-top: 1rem;
+	}
+</style>
