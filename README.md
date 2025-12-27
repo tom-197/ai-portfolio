@@ -1,4 +1,4 @@
-# Tom Hayes - AI Portfolio
+# Portfolio
 
 Built with [Astro](https://astro.build).
 
