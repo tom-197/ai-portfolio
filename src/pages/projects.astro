@@ -1,5 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection('projects');
+const sortedProjects = projects.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <Layout title="Projects | Tom Hayes">
@@ -7,19 +11,18 @@ import Layout from '../layouts/Layout.astro';
 	<p>A collection of my work in physical computing and AI.</p>
 
 	<div class="card-grid">
-		<!-- Legacy Project -->
-		<article class="card">
-			<h3>Tangible Interfaces</h3>
-			<p>Legacy work exploring physical manifestations of digital data.</p>
-			<a href="https://drshayes.com" target="_blank">View Project &rarr;</a>
-		</article>
-
-		<!-- Future AI Project Placeholder -->
-		<article class="card">
-			<h3>AI Sentiment Analysis</h3>
-			<p>Coming Soon: A real-time analysis of blog sentiment using LLMs.</p>
-			<span class="tag">In Progress</span>
-		</article>
+		{sortedProjects.map((project) => (
+			<article class="card">
+				<h3>{project.data.title}</h3>
+				<p>{project.data.description}</p>
+				{project.data.status && <span class="tag">{project.data.status}</span>}
+				{project.data.link && (
+					<a href={project.data.link} target="_blank">
+						View Project &rarr;
+					</a>
+				)}
+			</article>
+		))}
 	</div>
 </Layout>
 
