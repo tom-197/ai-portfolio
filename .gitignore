@@ -18,3 +18,8 @@ yarn-error.log*
 # system files
 .DS_Store
 Thumbs.db
+
+# project guides and status
+DEVELOPER_GUIDE.md
+CONTENT_GUIDE.md
+project_status.md
