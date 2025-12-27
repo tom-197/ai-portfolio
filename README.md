@@ -10,13 +10,19 @@ Since this project was generated manually, you need to install dependencies firs
 2.  **Restart VS Code** (or your terminal).
 3.  **Install Dependencies**:
     ```bash
-    npm install
-    ```
-4.  **Start Development Server**:
-    ```bash
-    npm run dev
-    ```
-5.  Open `http://localhost:4321` in your browser.
+# Tom Hayes - AI Portfolio
+
+This is my professional portfolio and blog, built with **Astro** and deployed on **Cloudflare Pages**.
+
+## 🚀 Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
 
 ## 📂 Project Structure
 
