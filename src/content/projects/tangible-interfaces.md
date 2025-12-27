@@ -1,7 +1,7 @@
 ---
 title: 'Tangible Interfaces'
 description: 'Legacy work exploring physical manifestations of digital data.'
-link: 'in progress'
+link: 'https://drshayes.com'
 order: 1
 ---
 
