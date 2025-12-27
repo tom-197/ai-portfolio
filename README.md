@@ -1,4 +1,4 @@
-# Dr. Sarah Hayes - AI Portfolio
+# Tom Hayes - AI Portfolio
 
 Built with [Astro](https://astro.build).
 
