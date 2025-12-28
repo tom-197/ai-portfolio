@@ -10,7 +10,7 @@ Since this project was generated manually, you need to install dependencies firs
 2.  **Restart VS Code** (or your terminal).
 3.  **Install Dependencies**:
     ```bash
-# Tom Hayes - AI Portfolio
+# Portfolio
 
 This is my professional portfolio and blog, built with **Astro** and deployed on **Cloudflare Pages**.
 
